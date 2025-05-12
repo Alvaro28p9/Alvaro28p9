@@ -99,7 +99,7 @@
 
     #message {
       margin-top: 20px;
-      background-color: rgba(255, 240, 245, 0.9);
+      background-color: rgba(255, 240, 245, 0.95);
       border: 2px solid #f48fb1;
       border-radius: 12px;
       padding: 20px;
@@ -140,12 +140,12 @@
 
   <div id="message">
     FANI, mi amor:  
-    En este rincón digital florece un árbol con corazones que nacen de mi alma.  
-    Cada uno lleva un te quiero, un suspiro, un abrazo que aún en la distancia quiere alcanzarte.  
-    Aunque a veces solo pueda decirlo a través de una pantalla...  
-    TE AMO con todo lo que soy, con todo lo que sueño.  
-    Gracias por existir, por inspirar cada latido de este amor que no conoce límites.  
-    Siempre tuyo mi serendipia.
+    En este árbol de corazones florece lo que siento por ti.  
+    Aunque a veces solo pueda decírtelo a través de una pantalla,  
+    cada latido que ves flotando aquí… es un "te amo".  
+    Tú eres mi inspiración, mi ternura, mi poesía viva.  
+    Gracias por ser tú, gracias por ser mi FANI.  
+    Te amo con el alma y más allá.
   </div>
 
   <script>
