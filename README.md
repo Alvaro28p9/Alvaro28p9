@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para FANI, con Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top, #ffeef3, #fff);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .tree-container {
+      position: relative;
+      width: 200px;
+      height: 300px;
+    }
+
+    .trunk {
+      position: absolute;
+      bottom: 0;
+      left: 90px;
+      width: 20px;
+      height: 120px;
+      background-color: #5d4037;
+      border-radius: 10px;
+      z-index: 1;
+    }
+
+    .branch {
+      position: absolute;
+      width: 6px;
+      height: 60px;
+      background-color: #6d4c41;
+      border-radius: 5px;
+      transform-origin: bottom;
+      z-index: 1;
+    }
+
+    .branch:nth-child(2) {
+      left: 70px;
+      bottom: 100px;
+      transform: rotate(-45deg);
+    }
+
+    .branch:nth-child(3) {
+      left: 124px;
+      bottom: 100px;
+      transform: rotate(45deg);
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #e91e63;
+      transform: rotate(-45deg);
+      animation: floatUp 6s infinite ease-in;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #e91e63;
+      border-radius: 50%;
+    }
+
+    .heart:before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart:after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(-45deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-200px) scale(1.2) rotate(-45deg);
+      }
+    }
+
+    #message {
+      margin-top: 20px;
+      background-color: rgba(255, 240, 245, 0.95);
+      border: 2px solid #f48fb1;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 18px;
+      color: #880e4f;
+      display: none;
+      max-width: 320px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #ec407a;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      background-color: #d81b60;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tree-container" onclick="showMessage()">
+    <div class="trunk"></div>
+    <div class="branch"></div>
+    <div class="branch"></div>
+  </div>
+
+  <button onclick="showMessage()">Para ti, FANI</button>
+
+  <div id="message">
+    FANI, mi amor:  
+    En este árbol de corazones florece lo que siento por ti.  
+    Aunque a veces solo pueda decírtelo a través de una pantalla,  
+    cada latido que ves flotando aquí… es un "te amo".  
+    Tú eres mi inspiración, mi ternura, mi poesía viva.  
+    Gracias por ser tú, gracias por ser mi FANI.  
+    Te amo con el alma y más allá.
+  </div>
+
+  <script>
+    const container = document.querySelector('.tree-container');
+
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 180 + 'px';
+      heart.style.bottom = Math.random() * 120 + 100 + 'px';
+      container.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 500);
+
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
